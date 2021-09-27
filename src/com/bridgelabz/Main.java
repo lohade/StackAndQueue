@@ -7,7 +7,7 @@ public class Main {
         Stack stack=new Stack();
         boolean status=true;
         do{
-            System.out.println("enter choice to operation:\n1:push element:\n2:pop the element:\n3:Exit ");
+            System.out.println("enter choice to operation:\n1:push element:\n2:pop the element:\n2:Exit ");
             int ch= scanner.nextInt();
             switch(ch) {
                 case 1:
@@ -26,11 +26,8 @@ public class Main {
                     stack.display();
                     break;
 
+
                 case 2:
-                    stack.pop();
-                    stack.display();
-                    break;
-                case 3:
                     status = false;
                     break;
             }
