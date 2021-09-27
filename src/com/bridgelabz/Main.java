@@ -26,8 +26,12 @@ public class Main {
                     stack.display();
                     break;
 
-
                 case 2:
+                    stack.pop();
+                    stack.display();
+                    break;
+
+                case 3:
                     status = false;
                     break;
             }
