@@ -1,16 +1,16 @@
 package com.bridgelabz;
 
 public class Stack<T> {
-    Node head=null;
+    Node top=null;
 
 
     public void push(T data){
         Node newnode=new Node(data);
-        if(head==null){
-            head=newnode;
+        if(top==null){
+            top=newnode;
         }
         else{
-            Node temp=head;
+            Node temp=top;
             while(temp.next!=null){
                 temp=temp.next;
             }
@@ -18,17 +18,16 @@ public class Stack<T> {
         }
     }
     public void pop(){
-        if(head==null){
+        if(top==null){
             System.out.println("Stack is empty:");
         }
-        else if(head.next==null){
-            System.out.println(head+"is pop:");
-            head=null;
-        }
+
         else{
-            Node temp=head;
+            Node temp=top;
             while(temp.next.next!=null){
                 temp=temp.next;
+
+
             }
             System.out.println(temp.next.data+"is pop:");
             temp.next=null;
@@ -37,10 +36,15 @@ public class Stack<T> {
 
 
     public void display(){
-        Node temp=head;
-        while(temp!=null){
-            System.out.print(temp.data+"->");
-            temp=temp.next;
+        if(top==null){
+            System.out.println("stack underflow");
+        }
+        else {
+            Node temp = top;
+            while (temp != null) {
+                System.out.print(temp.data + "->");
+                temp = temp.next;
+            }
         }
     }
 }
